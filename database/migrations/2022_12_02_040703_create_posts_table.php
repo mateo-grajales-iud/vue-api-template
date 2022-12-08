@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('name');
             $table->longText('description')->nullable();
+            $table->longText('content')->nullable();
             $table->enum('state', ['Publicado', 'No Publicado']);
             $table->timestamps();
         });
